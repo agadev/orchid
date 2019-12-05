@@ -25,6 +25,7 @@ class _AddHopPageState extends State<AddHopPage> {
     return TitledPage(
       title: "Select Hop Type",
       cancellable: true,
+      lightTheme: true,
       backAction: () {
         widget.onAddFlowComplete(null);
       },
@@ -32,16 +33,19 @@ class _AddHopPageState extends State<AddHopPage> {
         child: Column(
           children: <Widget>[
             pady(8),
+            _divider(),
             _buildHopChoice(text: "Orchid Hop", hopType: Protocol.Orchid),
             _divider(),
             _buildHopChoice(text: "OpenVPN Hop", hopType: Protocol.OpenVPN),
             _divider(),
             Expanded(
-                child: InstructionsView(
-              image: Image.asset("assets/images/approach.png"),
-              title: "Choose your protocol",
-              body:
-                  "There are two types of hops to choose from. You can route your traffic through a random, curated Orchid server or you can use your existing VPN provider’s OpenVPN configuration.",
+                child: Center(
+              child: InstructionsView(
+                image: Image.asset("assets/images/approach.png"),
+                title: "Choose your protocol",
+                body:
+                    "There are two types of hops to choose from. You can route your traffic through a random, curated Orchid server or you can use your existing VPN provider’s OpenVPN configuration.",
+              ),
             )),
           ],
         ),
@@ -90,4 +94,3 @@ class _AddHopPageState extends State<AddHopPage> {
   Divider _divider() =>
       Divider(color: Colors.black.withOpacity(0.3), height: 1.0);
 }
-
