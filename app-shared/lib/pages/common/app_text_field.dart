@@ -51,9 +51,9 @@ class AppTextField extends StatelessWidget {
                   textAlign: TextAlign.left,
                   maxLines: maxLines,
                   decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: hintText,
-                      //hintStyle: AppText.textHintStyle
+                    border: InputBorder.none,
+                    hintText: hintText,
+                    //hintStyle: AppText.textHintStyle
                   ),
                   onChanged: null,
                   focusNode: null,
@@ -67,7 +67,7 @@ class AppTextField extends StatelessWidget {
 
   static BoxDecoration textFieldEnabledDecoration = BoxDecoration(
       color: AppColors.neutral_7,
-      borderRadius: BorderRadius.circular(4.0),
+      borderRadius: BorderRadius.circular(10.0),
       border: Border.all(color: AppColors.neutral_5, width: 2.0));
 
   static BoxDecoration textFieldFocusedDecoration = BoxDecoration(

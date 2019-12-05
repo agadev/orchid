@@ -128,7 +128,7 @@ class _OpenVPNHopPageState extends State<OpenVPNHopPage> {
                       )),
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                        borderRadius: BorderRadius.all(Radius.circular(10.0)),
                         border:
                             Border.all(width: 2.0, color: AppColors.neutral_5),
                       ),
