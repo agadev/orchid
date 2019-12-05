@@ -98,13 +98,24 @@ class _OpenVPNHopPageState extends State<OpenVPNHopPage> {
 
                 // OPVN Config
                 pady(16),
-                Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text("Config",
-                        style:
-                            AppText.textLabelStyle.copyWith(fontSize: 14.0))),
+                Row(
+                  children: <Widget>[
+                    Text(
+                      "Config",
+                      style: AppText.textLabelStyle.copyWith(fontSize: 14.0),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(right: 10.0),
+                    ),
+                    Image.asset(
+                      "assets/images/info_outline.png",
+                      height: 18,
+                      color: AppColors.purple,
+                    ),
+                  ],
+                ),
                 Expanded(
-                  flex: 2,
+                  flex: 1,
                   child: Padding(
                     padding: const EdgeInsets.only(
                         left: 0, right: 0, top: 8, bottom: 8),
