@@ -58,6 +58,7 @@ class _OpenVPNHopPageState extends State<OpenVPNHopPage> {
     return TapClearsFocus(
       child: TitledPage(
         title: "OpenVPNHop",
+        lightTheme: false,
         actions: widget.mode == HopEditorMode.Create
             ? [widget.buildSaveButton(context)]
             : [],
@@ -121,21 +122,33 @@ class _OpenVPNHopPageState extends State<OpenVPNHopPage> {
                         left: 0, right: 0, top: 8, bottom: 8),
                     child: Container(
                       padding:
-                          EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                          EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
                       child: SingleChildScrollView(
-                          child: TextFormField(
-                        autocorrect: false,
-                        autofocus: false,
-                        keyboardType: TextInputType.multiline,
-                        style:
-                            AppText.logStyle.copyWith(color: AppColors.grey_2),
-                        controller: _ovpnConfig,
-                        maxLines: 99999,
-                        decoration: InputDecoration(
-                          hintText: "Paste your OVPN config file here",
-                          border: InputBorder.none,
-                          labelStyle: AppText.textLabelStyle,
-                        ),
+                          child: Stack(
+                        children: <Widget>[
+                          TextFormField(
+                            autocorrect: false,
+                            autofocus: false,
+                            keyboardType: TextInputType.multiline,
+                            style: AppText.logStyle
+                                .copyWith(color: AppColors.grey_2),
+                            controller: _ovpnConfig,
+                            maxLines: 99999,
+                            decoration: InputDecoration(
+                              hintText: "Paste your OVPN config file here",
+                              border: InputBorder.none,
+                              labelStyle: AppText.textLabelStyle,
+                            ),
+                          ),
+                          Align(
+                            alignment: Alignment.topRight,
+                            child: Icon(
+                              Icons.content_paste,
+                              color: AppColors.green_4,
+                              size: 18.0,
+                            ),
+                          )
+                        ],
                       )),
                       decoration: BoxDecoration(
                         color: Colors.white,
