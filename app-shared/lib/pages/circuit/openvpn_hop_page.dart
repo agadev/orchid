@@ -57,7 +57,7 @@ class _OpenVPNHopPageState extends State<OpenVPNHopPage> {
   Widget build(BuildContext context) {
     return TapClearsFocus(
       child: TitledPage(
-        title: "Open VPN Hop",
+        title: "OpenVPNHop",
         actions: widget.mode == HopEditorMode.Create
             ? [widget.buildSaveButton(context)]
             : [],
