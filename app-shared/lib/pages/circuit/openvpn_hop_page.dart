@@ -67,12 +67,12 @@ class _OpenVPNHopPageState extends State<OpenVPNHopPage> {
             child: Column(
               children: <Widget>[
                 // Username
-                pady(16),
+                // pady(16),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text("Username:",
-                        style: AppText.textLabelStyle.copyWith(fontSize: 20)),
+                        style: AppText.textLabelStyle.copyWith(fontSize: 14.0)),
                     pady(8),
                     AppTextField(
                         hintText: "Username",
@@ -87,7 +87,7 @@ class _OpenVPNHopPageState extends State<OpenVPNHopPage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text("Password:",
-                        style: AppText.textLabelStyle.copyWith(fontSize: 20)),
+                        style: AppText.textLabelStyle.copyWith(fontSize: 14.0)),
                     pady(8),
                     AppTextField(
                         hintText: "Password",
@@ -101,7 +101,8 @@ class _OpenVPNHopPageState extends State<OpenVPNHopPage> {
                 Align(
                     alignment: Alignment.centerLeft,
                     child: Text("Config:",
-                        style: AppText.textLabelStyle.copyWith(fontSize: 20))),
+                        style:
+                            AppText.textLabelStyle.copyWith(fontSize: 14.0))),
                 Expanded(
                   flex: 2,
                   child: Padding(
